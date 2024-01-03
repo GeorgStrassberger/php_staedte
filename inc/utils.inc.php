@@ -13,3 +13,10 @@ function generate_alphabet() {
     }
     return $chars;
 }
+
+function render($path, array $data = []){
+    $alphabet = generate_alphabet();
+    extract($data);
+    require $path;
+}
+

@@ -11,12 +11,8 @@ catch (PDOException $e){
     die();
 }
 
-// var_dump($pdo);
-
 // Alle Städte aus der DB laden.
 $stmt = $pdo->prepare('SELECT * FROM `cities` ORDER BY `id` ASC');
 $stmt->execute();
 
 $cities = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// var_dump($cities);
